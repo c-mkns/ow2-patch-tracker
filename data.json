@@ -1,0 +1,220 @@
+{
+    "version": "Overwatch Retail Patch Notes – April 23, 2026",
+    "date": "April 23, 2026",
+    "heroes": [
+        {
+            "name": "Roadhog",
+            "changes": [
+                {
+                    "ability": "Chain Hook",
+                    "note": "Cooldown reduced from 8 to 7 seconds."
+                }
+            ]
+        },
+        {
+            "name": "Sombra",
+            "changes": [
+                {
+                    "ability": "Stealth",
+                    "note": "Movement speed bonus reduction while revealed by damage reduced from 50% to 33%."
+                }
+            ]
+        },
+        {
+            "name": "Vendetta",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Health increased from 175 to 200. (Total health increased from 250 to 275.)"
+                }
+            ]
+        },
+        {
+            "name": "Mizuki",
+            "changes": [
+                {
+                    "ability": "Katashiro Return",
+                    "note": "Enemies can no longer prevent Mizuki from recalling by standing on Katashiro Return's starting point."
+                }
+            ]
+        },
+        {
+            "name": "Hazard",
+            "changes": [
+                {
+                    "ability": "Off the Wall",
+                    "note": "Damage decreased from 60 to 40."
+                },
+                {
+                    "ability": "Woof Woof!",
+                    "note": "Extra [Spike Guard] Resource reduced from 30% to 15%."
+                },
+                {
+                    "ability": "Woof Woof!",
+                    "note": "[Violent Leap] Hit Bonus Energy decreased from 15% to 10%."
+                },
+                {
+                    "ability": "Hit Me Again",
+                    "note": "Movement Speed penalty reduction decreased from 90% reduced to 50% reduced."
+                },
+                {
+                    "ability": "Phreak Foil",
+                    "note": "Extra [Spike Guard] Resource bonus decreased from 50% to 25%."
+                },
+                {
+                    "ability": "Phreak Foil",
+                    "note": "[Jagged Wall] Hits Bonus Energy decreased from 25% to 15%."
+                }
+            ]
+        },
+        {
+            "name": "Junker Queen",
+            "changes": [
+                {
+                    "ability": "Royal Bullets",
+                    "note": "Wound damage decreased from 40 to 25."
+                }
+            ]
+        },
+        {
+            "name": "Orisa",
+            "changes": [
+                {
+                    "ability": "Restortify",
+                    "note": "Healing reduced from 8% of Max Life per second to 5% of Max Life per second."
+                },
+                {
+                    "ability": "Enhanced Target Sensors",
+                    "note": "Bonus damage decreased from 25% to 10%."
+                },
+                {
+                    "ability": "Enhanced Target Sensors",
+                    "note": "Attack Speed stat bonus decreased from 10% to 5%."
+                },
+                {
+                    "ability": "Enhanced Target Sensors",
+                    "note": "Cost increased from 4000 to 5000."
+                }
+            ]
+        },
+        {
+            "name": "Ramattra",
+            "changes": [
+                {
+                    "ability": "Retaliation",
+                    "note": "Maximum damage increased to 150."
+                },
+                {
+                    "ability": "Dreadknight",
+                    "note": "[Annihilation] Duration bonus decreased from 2s to 1s."
+                },
+                {
+                    "ability": "Conversion Protocol",
+                    "note": "Healing decreased from 50% to 25% of damage mitigated."
+                },
+                {
+                    "ability": "Voracious Maelstrom",
+                    "note": "[Nemesis Form] Cooldown Reduction per enemy hit by [Ravenous Vortex] reduced from 1s to 0.5s."
+                },
+                {
+                    "ability": "Void Blight",
+                    "note": "Void Blight damage increased from 20 to 30."
+                },
+                {
+                    "ability": "R-7000 Powercell",
+                    "note": "Cost decreased from 12000 to 10000."
+                },
+                {
+                    "ability": "Recursion Relay",
+                    "note": "Damage amplification increased from 10% to 15%."
+                },
+                {
+                    "ability": "Second Phase",
+                    "note": "[Ravenous Vortex] cooldown reduction reduced from 100% to 75%."
+                },
+                {
+                    "ability": "Final Form",
+                    "note": "Final Form healing reduced from 80 to 50."
+                },
+                {
+                    "ability": "Nano-Mender",
+                    "note": "Re-enabled."
+                }
+            ]
+        },
+        {
+            "name": "Zarya",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Increased currency earned from Healing and Damage by 7.14%."
+                }
+            ]
+        },
+        {
+            "name": "Freja",
+            "changes": [
+                {
+                    "ability": "Volley à Deux",
+                    "note": "Additional bolt damage decreased from 50% reduced damage to 60% reduced damage."
+                }
+            ]
+        },
+        {
+            "name": "Ana",
+            "changes": [
+                {
+                    "ability": "Cluster Core",
+                    "note": "Re-enabled."
+                }
+            ]
+        },
+        {
+            "name": "Brigitte",
+            "changes": [
+                {
+                    "ability": "Packstacker",
+                    "note": "[Repair Pack] Duration bonus decreased from 50% to 25%."
+                }
+            ]
+        },
+        {
+            "name": "Juno",
+            "changes": [
+                {
+                    "ability": "MediMaster",
+                    "note": "Critical damage increased from 175% to 200%."
+                },
+                {
+                    "ability": "Long Range Blaster",
+                    "note": "[Mediblaster] Falloff range bonus increased from 5m to 15m."
+                },
+                {
+                    "ability": "Heal Formation",
+                    "note": "Re-enabled."
+                }
+            ]
+        },
+        {
+            "name": "Wuyang",
+            "changes": [
+                {
+                    "ability": "Water College Hat",
+                    "note": "Passive [Restoration Stream] Duration bonus reduced from 50% to 25%."
+                },
+                {
+                    "ability": "Water College Hat",
+                    "note": "Overhealth per second reduced from 10 to 5."
+                },
+                {
+                    "ability": "Water College Hat",
+                    "note": "Max Overhealth decreased from 30 to 15."
+                },
+                {
+                    "ability": "Water College Hat",
+                    "note": "Cost increased from 4000 to 5000."
+                }
+            ]
+        }
+    ]
+}
