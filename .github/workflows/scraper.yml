@@ -1,0 +1,42 @@
+name: Daily Overwatch Patch Scraper
+
+on:
+  schedule:
+    # Läuft jeden Tag um 02:00 Uhr nachts (UTC)
+    - cron: '0 2 * * *'
+  workflow_dispatch: # Erlaubt dir, das Skript manuell auf GitHub zu starten
+
+permissions:
+  contents: write # Erlaubt dem Bot, die JSON-Datei hochzuladen
+
+jobs:
+  run-scraper:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Lade Code aus dem Repository
+        uses: actions/checkout@v4
+
+      - name: Installiere Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Installiere Bibliotheken
+        run: |
+          python -m pip install --upgrade pip
+          pip install playwright beautifulsoup4
+          
+      - name: Installiere Playwright Browser
+        run: playwright install chromium
+
+      - name: Führe Scraper aus
+        run: python scraper.py
+
+      - name: Speichere JSON in GitHub
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add data.json
+          # Pusht nur, wenn sich die Patch-Notes wirklich geändert haben
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-Update: Neue Patch-Notes" && git push)
