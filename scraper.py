@@ -22,6 +22,72 @@ def fetch_html_with_playwright():
         html_content = page.content()
         browser.close()
         return html_content
+    
+def classify_change(note_text):
+    text = note_text.lower()
+    
+    # 1. Bugfixes & System Status (Höchste Priorität)
+    if any(kw in text for kw in ["fixed", "resolved", "bug", "issue", "re-enabled", "no longer prevent"]):
+        return "fix"
+
+    # --- 2. SONDERFÄLLE (Die Doppel-Verneinungs-Fallen) ---
+    
+    # Falle A: Wenn eine "Reduzierung" (Cooldown/Strafe) schlechter wird -> Nerf
+    if "cooldown reduction" in text or "penalty reduction" in text:
+        if any(w in text for w in ["decreased", "reduced", "lower"]):
+            return "nerf"
+        if any(w in text for w in ["increased", "higher", "greater"]):
+            return "buff"
+            
+    # Falle B: Wenn die "Reduzierung" eines Bonus kleiner wird -> Buff (Sombra)
+    if "bonus reduction" in text:
+        if any(w in text for w in ["decreased", "reduced", "lower"]):
+            return "buff"
+        if any(w in text for w in ["increased", "higher", "greater"]):
+            return "nerf"
+
+    # --- 3. NORMALE ATTRIBUTE ---
+
+    # Invertierte Attribute (Weniger ist ein Buff, Mehr ist ein Nerf)
+    inverted_attributes = [
+        "cooldown", "cost", "time", "delay", "spread", "recoil", 
+        "penalty", "requirement", "falloff"
+    ]
+    
+    # Standard Attribute (Mehr ist ein Buff, Weniger ist ein Nerf)
+    # Neu hinzugefügt: energy, resource, currency, amplification
+    standard_attributes = [
+        "damage", "healing", "health", "armor", "shields", "overhealth", 
+        "ammo", "range", "radius", "size", "speed", "duration", 
+        "knockback", "rate", "distance", "energy", "resource", "currency", "amplification"
+    ]
+    
+    words_down = ["reduced", "decreased", "shorter", "slower", "less", "lower"]
+    words_up = ["increased", "longer", "faster", "more", "higher", "bonus"]
+
+    # Prüfe zuerst auf invertierte Logik
+    for attr in inverted_attributes:
+        if attr in text:
+            if any(w in text for w in words_down):
+                return "buff"
+            if any(w in text for w in words_up):
+                return "nerf"
+
+    # Prüfe danach auf Standard-Logik
+    for attr in standard_attributes:
+        if attr in text:
+            if any(w in text for w in words_up):
+                return "buff"
+            if any(w in text for w in words_down):
+                return "nerf"
+
+    # 4. Fallback-Keywords für Reworks
+    if any(kw in text for kw in ["granted", "now pierces", "cleanses", "added", "new functionality"]):
+        return "buff"
+    if any(kw in text for kw in ["removed", "no longer"]):
+        return "nerf"
+
+    return "neutral"
 
 def parse_patch_notes(html_source):
     soup = BeautifulSoup(html_source, 'html.parser')
@@ -70,7 +136,8 @@ def parse_patch_notes(html_source):
                             change_text = " ".join(li.text.split())
                             patch_data["heroes"][hero_name].append({
                                 "ability": current_context,
-                                "note": change_text
+                                "note": change_text,
+                                "type": classify_change(change_text)
                             })
 
             # Spezifische Fähigkeiten
@@ -85,7 +152,8 @@ def parse_patch_notes(html_source):
                         change_text = " ".join(li.text.split())
                         patch_data["heroes"][hero_name].append({
                             "ability": ability_name,
-                            "note": change_text
+                            "note": change_text,
+                            "type": classify_change(change_text)
                         })
 
         final_output = {
