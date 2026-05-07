@@ -21,7 +21,7 @@ def send_telegram_message(text):
     payload = {
         "chat_id": chat_id,
         "text": text,
-        "parse_mode": "HTML" # Erlaubt uns, Text fett oder kursiv zu machen
+        "parse_mode": "HTML" 
     }
     try:
         requests.post(url, json=payload)
@@ -56,27 +56,44 @@ def enrich_data_with_ai(raw_patch_data):
     print("Starte KI-Analyse mit Gemini...")
     genai.configure(api_key=api_key)
     
-    # Wir nutzen das Flash-Modell: Pfeilschnell und kostenlos
     model = genai.GenerativeModel('gemini-1.5-flash')
     
-    # Der Prompt zwingt die KI, NUR gültiges JSON auszugeben!
-    prompt = f"""
-    Du bist ein Experte für das Videospiel Overwatch 2 und analysierst Patch-Notes.
-    Hier sind die Rohdaten eines neuen Patches im JSON-Format: 
-    {json.dumps(raw_patch_data, ensure_ascii=False)}
+    # Dein optimierter, professioneller Prompt
+    prompt = f"""### ROLE
+You are a Senior Gameplay Balance Analyst for Overwatch 2 with deep knowledge of hero mechanics, meta-trends, and break-points.
 
-    Deine Aufgabe:
-    1. Bewerte JEDE Änderung in 'changes' und füge das Feld "type" hinzu. 
-       Gültige Werte für "type" sind NUR: "buff", "nerf", "fix", "neutral".
-    2. Analysiere das Gesamtbild jedes Helden und füge dem Helden-Objekt das Feld "trend" hinzu.
-       Gültige Werte für "trend" sind NUR: "winner", "loser", "balanced", "rework", "bugfixes".
-    3. Füge jedem Helden ein Feld "summary" hinzu: Ein kurzer, einzeiliger Satz (auf Deutsch), der zusammenfasst, was mit dem Helden passiert ist (z.B. "Massiver Nerf seiner Heilung, aber leichter Buff für die Mobilität.").
+### TASK
+Analyze and enrich the provided Overwatch 2 patch notes JSON. Your goal is to evaluate the gameplay impact of each change and provide a professional assessment of the power shift for each hero.
 
-    ANTWORTE AUSSCHLIESSLICH MIT EINEM GÜLTIGEN JSON-OBJEKT, das exakt die gleiche Struktur wie die Rohdaten hat, nur ergänzt um die Felder 'type', 'trend' und 'summary'. Schreibe KEINEN Text vor oder nach dem JSON. Nutze keine Markdown-Blöcke wie ```json.
-    """
+### INPUT DATA
+The following JSON contains the raw patch notes:
+{json.dumps(raw_patch_data, ensure_ascii=False)}
+
+### INSTRUCTIONS
+1. **Verify/Enrich "type" (Changes Level):** Within each object in the "changes" array, ensure the "type" field is accurate. If it is missing or incorrect based on gameplay impact, set it to exactly one of: "buff", "nerf", "fix", "neutral".
+   
+2. **Determine "trend" (Hero Level):** Add a "trend" field to each hero object based on the net impact of all their changes:
+   - "winner": Significant increase in power or viability.
+   - "loser": Significant decrease in power or viability.
+   - "balanced": Changes cancel each other out or are minor.
+   - "rework": Fundamental mechanics changed, shifting how the hero is played.
+   - "bugfixes": Only technical fixes with no direct balance intent.
+
+3. **Write "summary" (Hero Level):** Add a "summary" field to each hero object. Provide a professional, one-sentence analysis in English explaining the gameplay consequences (e.g., "Trading sustain for higher burst potential makes them more lethal but punishable.").
+
+### CONSTRAINTS
+- Maintain the EXACT original JSON structure (root keys, hero names, etc.).
+- Do not add any keys other than the ones requested.
+- Ensure the "summary" is concise and technically accurate for an Overwatch player.
+- Ensure the output is valid, minified or pretty-printed JSON.
+
+### OUTPUT FORMAT
+Respond ONLY with the updated JSON object. 
+NO markdown code blocks (no ```json). 
+NO conversational filler. 
+NO explanations."""
 
     try:
-        # response_mime_type zwingt die API, wirklich reines JSON zu generieren
         response = model.generate_content(
             prompt,
             generation_config=genai.GenerationConfig(
@@ -88,75 +105,8 @@ def enrich_data_with_ai(raw_patch_data):
         print("KI-Analyse erfolgreich abgeschlossen!")
         return enriched_data
     except Exception as e:
-        print(f"Fehler bei der KI-Analyse: {e}")
-        # Fallback: Falls die KI streikt, geben wir die Rohdaten zurück
+        print(f"CRITICAL ERROR bei der KI-Analyse: {e}")
         return raw_patch_data
-    
-def classify_change(note_text):
-    text = note_text.lower()
-    
-    # 1. Bugfixes & System Status (Höchste Priorität)
-    if any(kw in text for kw in ["fixed", "resolved", "bug", "issue", "re-enabled", "no longer prevent"]):
-        return "fix"
-
-    # --- 2. SONDERFÄLLE (Die Doppel-Verneinungs-Fallen) ---
-    
-    # Falle A: Wenn eine "Reduzierung" (Cooldown/Strafe) schlechter wird -> Nerf
-    if "cooldown reduction" in text or "penalty reduction" in text:
-        if any(w in text for w in ["decreased", "reduced", "lower"]):
-            return "nerf"
-        if any(w in text for w in ["increased", "higher", "greater"]):
-            return "buff"
-            
-    # Falle B: Wenn die "Reduzierung" eines Bonus kleiner wird -> Buff (Sombra)
-    if "bonus reduction" in text:
-        if any(w in text for w in ["decreased", "reduced", "lower"]):
-            return "buff"
-        if any(w in text for w in ["increased", "higher", "greater"]):
-            return "nerf"
-
-    # --- 3. NORMALE ATTRIBUTE ---
-
-    # Invertierte Attribute (Weniger ist ein Buff, Mehr ist ein Nerf)
-    inverted_attributes = [
-        "cooldown", "cost", "time", "delay", "spread", "recoil", 
-        "penalty", "requirement", "falloff"
-    ]
-    
-    # Standard Attribute (Mehr ist ein Buff, Weniger ist ein Nerf)
-    # Neu hinzugefügt: energy, resource, currency, amplification
-    standard_attributes = [
-        "damage", "healing", "health", "armor", "shields", "overhealth", 
-        "ammo", "range", "radius", "size", "speed", "duration", 
-        "knockback", "rate", "distance", "energy", "resource", "currency", "amplification"
-    ]
-    
-    words_down = ["reduced", "decreased", "shorter", "slower", "less", "lower"]
-    words_up = ["increased", "longer", "faster", "more", "higher", "bonus"]
-
-    # Prüfe zuerst auf invertierte Logik
-    for attr in inverted_attributes:
-        if attr in text:
-            if any(w in text for w in words_down):
-                return "buff"
-            if any(w in text for w in words_up):
-                return "nerf"
-
-    # Prüfe danach auf Standard-Logik
-    for attr in standard_attributes:
-        if attr in text:
-            if any(w in text for w in words_up):
-                return "buff"
-            if any(w in text for w in words_down):
-                return "nerf"
-
-    # 4. Fallback-Keywords für Reworks
-    if any(kw in text for kw in ["granted", "now pierces", "cleanses", "added", "new functionality"]):
-        return "buff"
-    if any(kw in text for kw in ["removed", "no longer"]):
-        return "nerf"
-
-    return "neutral"
 
 def parse_patch_notes(html_source):
     soup = BeautifulSoup(html_source, 'html.parser')
@@ -171,7 +121,6 @@ def parse_patch_notes(html_source):
         
         hero_sections = patch_container.find_all('div', class_='PatchNotesHeroUpdate')
         
-        # Überspringe Patches ohne Helden-Änderungen (z.B. reine System-Hotfixes)
         if len(hero_sections) == 0:
             continue
             
@@ -193,7 +142,6 @@ def parse_patch_notes(html_source):
             if hero_name not in patch_data["heroes"]:
                 patch_data["heroes"][hero_name] = []
 
-            # Allgemeine Updates
             general_updates = hero.find('div', class_='PatchNotesHeroUpdate-generalUpdates')
             if general_updates:
                 current_context = "General / Base Stats"
@@ -205,11 +153,9 @@ def parse_patch_notes(html_source):
                             change_text = " ".join(li.text.split())
                             patch_data["heroes"][hero_name].append({
                                 "ability": current_context,
-                                "note": change_text,
-                                "type": classify_change(change_text)
+                                "note": change_text
                             })
 
-            # Spezifische Fähigkeiten
             ability_updates = hero.find_all('div', class_='PatchNotesAbilityUpdate')
             for ability in ability_updates:
                 ability_name_tag = ability.find('div', class_='PatchNotesAbilityUpdate-name')
@@ -221,8 +167,7 @@ def parse_patch_notes(html_source):
                         change_text = " ".join(li.text.split())
                         patch_data["heroes"][hero_name].append({
                             "ability": ability_name,
-                            "note": change_text,
-                            "type": classify_change(change_text)
+                            "note": change_text
                         })
 
         final_output = {
@@ -245,7 +190,6 @@ if __name__ == "__main__":
                     old_data = json.load(f)
                     
                     if old_data.get("version") == raw_data["version"]:
-                        # NACHRICHT 1: Kein neuer Patch
                         msg = f"ℹ️ <b>OW2 Patch Tracker</b>\nCheck durchgeführt. Kein neuer Patch gefunden. Aktuellste Version bleibt: <i>{raw_data['version']}</i>"
                         send_telegram_message(msg)
                         
@@ -260,7 +204,6 @@ if __name__ == "__main__":
             with open("data.json", "w", encoding="utf-8") as f:
                 json.dump(final_data, f, ensure_ascii=False, indent=4)
                 
-            # NACHRICHT 2: Neuer Patch erfolgreich verarbeitet!
             msg = f"🚨 <b>NEUER OW2 PATCH ENTDECKT!</b> 🚨\nVersion: <i>{final_data['version']}</i>\nKI-Analyse wurde abgeschlossen und Daten auf GitHub aktualisiert! ✅"
             send_telegram_message(msg)
             
