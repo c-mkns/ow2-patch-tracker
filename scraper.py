@@ -1,8 +1,32 @@
+import sys
+import os
+import json
+import requests
+
+import google.generativeai as genai
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
-import json
 
 URL = "https://overwatch.blizzard.com/en-us/news/patch-notes/"
+
+def send_telegram_message(text):
+    bot_token = os.environ.get("TELEGRAM_BOT_TOKEN")
+    chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+    
+    if not bot_token or not chat_id:
+        print("Telegram-Daten fehlen. Überspringe Benachrichtigung.")
+        return
+
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    payload = {
+        "chat_id": chat_id,
+        "text": text,
+        "parse_mode": "HTML" # Erlaubt uns, Text fett oder kursiv zu machen
+    }
+    try:
+        requests.post(url, json=payload)
+    except Exception as e:
+        print(f"Telegram-Fehler: {e}")
 
 def fetch_html_with_playwright():
     print("Starte unsichtbaren Browser...")
@@ -22,6 +46,51 @@ def fetch_html_with_playwright():
         html_content = page.content()
         browser.close()
         return html_content
+
+def enrich_data_with_ai(raw_patch_data):
+    api_key = os.environ.get("GEMINI_API_KEY")
+    if not api_key:
+        print("Kein API-Key gefunden. KI-Analyse wird übersprungen.")
+        return raw_patch_data
+
+    print("Starte KI-Analyse mit Gemini...")
+    genai.configure(api_key=api_key)
+    
+    # Wir nutzen das Flash-Modell: Pfeilschnell und kostenlos
+    model = genai.GenerativeModel('gemini-1.5-flash')
+    
+    # Der Prompt zwingt die KI, NUR gültiges JSON auszugeben!
+    prompt = f"""
+    Du bist ein Experte für das Videospiel Overwatch 2 und analysierst Patch-Notes.
+    Hier sind die Rohdaten eines neuen Patches im JSON-Format: 
+    {json.dumps(raw_patch_data, ensure_ascii=False)}
+
+    Deine Aufgabe:
+    1. Bewerte JEDE Änderung in 'changes' und füge das Feld "type" hinzu. 
+       Gültige Werte für "type" sind NUR: "buff", "nerf", "fix", "neutral".
+    2. Analysiere das Gesamtbild jedes Helden und füge dem Helden-Objekt das Feld "trend" hinzu.
+       Gültige Werte für "trend" sind NUR: "winner", "loser", "balanced", "rework", "bugfixes".
+    3. Füge jedem Helden ein Feld "summary" hinzu: Ein kurzer, einzeiliger Satz (auf Deutsch), der zusammenfasst, was mit dem Helden passiert ist (z.B. "Massiver Nerf seiner Heilung, aber leichter Buff für die Mobilität.").
+
+    ANTWORTE AUSSCHLIESSLICH MIT EINEM GÜLTIGEN JSON-OBJEKT, das exakt die gleiche Struktur wie die Rohdaten hat, nur ergänzt um die Felder 'type', 'trend' und 'summary'. Schreibe KEINEN Text vor oder nach dem JSON. Nutze keine Markdown-Blöcke wie ```json.
+    """
+
+    try:
+        # response_mime_type zwingt die API, wirklich reines JSON zu generieren
+        response = model.generate_content(
+            prompt,
+            generation_config=genai.GenerationConfig(
+                response_mime_type="application/json",
+            )
+        )
+        
+        enriched_data = json.loads(response.text)
+        print("KI-Analyse erfolgreich abgeschlossen!")
+        return enriched_data
+    except Exception as e:
+        print(f"Fehler bei der KI-Analyse: {e}")
+        # Fallback: Falls die KI streikt, geben wir die Rohdaten zurück
+        return raw_patch_data
     
 def classify_change(note_text):
     text = note_text.lower()
@@ -168,8 +237,31 @@ def parse_patch_notes(html_source):
 if __name__ == "__main__":
     html = fetch_html_with_playwright()
     if html:
-        data = parse_patch_notes(html)
-        if data:
+        raw_data = parse_patch_notes(html) 
+        
+        if raw_data:
+            try:
+                with open("data.json", "r", encoding="utf-8") as f:
+                    old_data = json.load(f)
+                    
+                    if old_data.get("version") == raw_data["version"]:
+                        # NACHRICHT 1: Kein neuer Patch
+                        msg = f"ℹ️ <b>OW2 Patch Tracker</b>\nCheck durchgeführt. Kein neuer Patch gefunden. Aktuellste Version bleibt: <i>{raw_data['version']}</i>"
+                        send_telegram_message(msg)
+                        
+                        print(f"Kein neuer Patch. Beende Skript.")
+                        sys.exit(0)
+            except FileNotFoundError:
+                print("Keine alte data.json gefunden.")
+
+            print("🚀 Neuer Patch entdeckt! Wecke die KI für die Analyse auf...")
+            final_data = enrich_data_with_ai(raw_data)
+            
             with open("data.json", "w", encoding="utf-8") as f:
-                json.dump(data, f, ensure_ascii=False, indent=4)
-            print("Erfolg! data.json wurde erstellt.")
+                json.dump(final_data, f, ensure_ascii=False, indent=4)
+                
+            # NACHRICHT 2: Neuer Patch erfolgreich verarbeitet!
+            msg = f"🚨 <b>NEUER OW2 PATCH ENTDECKT!</b> 🚨\nVersion: <i>{final_data['version']}</i>\nKI-Analyse wurde abgeschlossen und Daten auf GitHub aktualisiert! ✅"
+            send_telegram_message(msg)
+            
+            print("Erfolg! Neue data.json wurde gespeichert.")
