@@ -1,218 +1,282 @@
 {
-    "version": "Overwatch Retail Patch Notes – April 01, 2026:AUTO TRIGGER",
+    "version": "Overwatch Retail Patch Notes – April 23, 2026",
     "date": "April 23, 2026",
     "heroes": [
         {
             "name": "Roadhog",
+            "trend": "winner",
+            "summary": "Increased Chain Hook frequency enhances his pick potential and overall ability to control space.",
             "changes": [
                 {
                     "ability": "Chain Hook",
-                    "note": "Cooldown reduced from 8 to 7 seconds."
+                    "note": "Cooldown reduced from 8 to 7 seconds.",
+                    "type": "buff"
                 }
             ]
         },
         {
             "name": "Sombra",
+            "trend": "winner",
+            "summary": "Improved retention of movement speed when damaged allows for more successful escapes and agile repositioning.",
             "changes": [
                 {
                     "ability": "Stealth",
-                    "note": "Movement speed bonus reduction while revealed by damage reduced from 50% to 33%."
+                    "note": "Movement speed bonus reduction while revealed by damage reduced from 50% to 33%.",
+                    "type": "buff"
                 }
             ]
         },
         {
             "name": "Vendetta",
+            "trend": "winner",
+            "summary": "A higher health pool significantly increases survivability and alters lethal break-points for opponents.",
             "changes": [
                 {
                     "ability": "General / Base Stats",
-                    "note": "Health increased from 175 to 200. (Total health increased from 250 to 275.)"
+                    "note": "Health increased from 175 to 200. (Total health increased from 250 to 275.)",
+                    "type": "buff"
                 }
             ]
         },
         {
             "name": "Mizuki",
+            "trend": "bugfixes",
+            "summary": "Removing the ability for enemies to block the recall point ensures the mechanic functions reliably as an escape tool.",
             "changes": [
                 {
                     "ability": "Katashiro Return",
-                    "note": "Enemies can no longer prevent Mizuki from recalling by standing on Katashiro Return's starting point."
+                    "note": "Enemies can no longer prevent Mizuki from recalling by standing on Katashiro Return's starting point.",
+                    "type": "fix"
                 }
             ]
         },
         {
             "name": "Hazard",
+            "trend": "loser",
+            "summary": "Sweeping nerfs to damage and resource generation severely cripple Hazard's frontline sustainability and offensive pressure.",
             "changes": [
                 {
                     "ability": "Off the Wall",
-                    "note": "Damage decreased from 60 to 40."
+                    "note": "Damage decreased from 60 to 40.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Woof Woof!",
-                    "note": "Extra [Spike Guard] Resource reduced from 30% to 15%."
+                    "note": "Extra [Spike Guard] Resource reduced from 30% to 15%.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Woof Woof!",
-                    "note": "[Violent Leap] Hit Bonus Energy decreased from 15% to 10%."
+                    "note": "[Violent Leap] Hit Bonus Energy decreased from 15% to 10%.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Hit Me Again",
-                    "note": "Movement Speed penalty reduction decreased from 90% reduced to 50% reduced."
+                    "note": "Movement Speed penalty reduction decreased from 90% reduced to 50% reduced.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Phreak Foil",
-                    "note": "Extra [Spike Guard] Resource bonus decreased from 50% to 25%."
+                    "note": "Extra [Spike Guard] Resource bonus decreased from 50% to 25%.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Phreak Foil",
-                    "note": "[Jagged Wall] Hits Bonus Energy decreased from 25% to 15%."
+                    "note": "[Jagged Wall] Hits Bonus Energy decreased from 25% to 15%.",
+                    "type": "nerf"
                 }
             ]
         },
         {
             "name": "Junker Queen",
+            "trend": "loser",
+            "summary": "Reducing wound damage lowers her self-healing and overall pressure during brawls.",
             "changes": [
                 {
                     "ability": "Royal Bullets",
-                    "note": "Wound damage decreased from 40 to 25."
+                    "note": "Wound damage decreased from 40 to 25.",
+                    "type": "nerf"
                 }
             ]
         },
         {
             "name": "Orisa",
+            "trend": "loser",
+            "summary": "Significant hits to sustain and damage output force Orisa into a much less dominant and more punishable position.",
             "changes": [
                 {
                     "ability": "Restortify",
-                    "note": "Healing reduced from 8% of Max Life per second to 5% of Max Life per second."
+                    "note": "Healing reduced from 8% of Max Life per second to 5% of Max Life per second.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Enhanced Target Sensors",
-                    "note": "Bonus damage decreased from 25% to 10%."
+                    "note": "Bonus damage decreased from 25% to 10%.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Enhanced Target Sensors",
-                    "note": "Attack Speed stat bonus decreased from 10% to 5%."
+                    "note": "Attack Speed stat bonus decreased from 10% to 5%.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Enhanced Target Sensors",
-                    "note": "Cost increased from 4000 to 5000."
+                    "note": "Cost increased from 4000 to 5000.",
+                    "type": "nerf"
                 }
             ]
         },
         {
             "name": "Ramattra",
+            "trend": "rework",
+            "summary": "Trading defensive sustain for higher damage amplification and utility shifts him toward a more glass-cannon style of engagement.",
             "changes": [
                 {
                     "ability": "Retaliation",
-                    "note": "Maximum damage increased to 150."
+                    "note": "Maximum damage increased to 150.",
+                    "type": "buff"
                 },
                 {
                     "ability": "Dreadknight",
-                    "note": "[Annihilation] Duration bonus decreased from 2s to 1s."
+                    "note": "[Annihilation] Duration bonus decreased from 2s to 1s.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Conversion Protocol",
-                    "note": "Healing decreased from 50% to 25% of damage mitigated."
+                    "note": "Healing decreased from 50% to 25% of damage mitigated.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Voracious Maelstrom",
-                    "note": "[Nemesis Form] Cooldown Reduction per enemy hit by [Ravenous Vortex] reduced from 1s to 0.5s."
+                    "note": "[Nemesis Form] Cooldown Reduction per enemy hit by [Ravenous Vortex] reduced from 1s to 0.5s.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Void Blight",
-                    "note": "Void Blight damage increased from 20 to 30."
+                    "note": "Void Blight damage increased from 20 to 30.",
+                    "type": "buff"
                 },
                 {
                     "ability": "R-7000 Powercell",
-                    "note": "Cost decreased from 12000 to 10000."
+                    "note": "Cost decreased from 12000 to 10000.",
+                    "type": "buff"
                 },
                 {
                     "ability": "Recursion Relay",
-                    "note": "Damage amplification increased from 10% to 15%."
+                    "note": "Damage amplification increased from 10% to 15%.",
+                    "type": "buff"
                 },
                 {
                     "ability": "Second Phase",
-                    "note": "[Ravenous Vortex] cooldown reduction reduced from 100% to 75%."
+                    "note": "[Ravenous Vortex] cooldown reduction reduced from 100% to 75%.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Final Form",
-                    "note": "Final Form healing reduced from 80 to 50."
+                    "note": "Final Form healing reduced from 80 to 50.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Nano-Mender",
-                    "note": "Re-enabled."
+                    "note": "Re-enabled.",
+                    "type": "fix"
                 }
             ]
         },
         {
             "name": "Zarya",
+            "trend": "winner",
+            "summary": "Improved currency generation provides faster scaling and item progression in applicable game modes.",
             "changes": [
                 {
                     "ability": "General / Base Stats",
-                    "note": "Increased currency earned from Healing and Damage by 7.14%."
+                    "note": "Increased currency earned from Healing and Damage by 7.14%.",
+                    "type": "buff"
                 }
             ]
         },
         {
             "name": "Freja",
+            "trend": "loser",
+            "summary": "Lowering the efficiency of her additional bolts reduces her burst damage and multi-target lethality.",
             "changes": [
                 {
                     "ability": "Volley à Deux",
-                    "note": "Additional bolt damage decreased from 50% reduced damage to 60% reduced damage."
+                    "note": "Additional bolt damage decreased from 50% reduced damage to 60% reduced damage.",
+                    "type": "nerf"
                 }
             ]
         },
         {
             "name": "Ana",
+            "trend": "balanced",
+            "summary": "Re-enabling the Cluster Core restores previous functionality without impacting baseline competitive stats.",
             "changes": [
                 {
                     "ability": "Cluster Core",
-                    "note": "Re-enabled."
+                    "note": "Re-enabled.",
+                    "type": "fix"
                 }
             ]
         },
         {
             "name": "Brigitte",
+            "trend": "loser",
+            "summary": "A significant reduction in Repair Pack duration decreases her ability to provide sustained support to mobile flankers.",
             "changes": [
                 {
                     "ability": "Packstacker",
-                    "note": "[Repair Pack] Duration bonus decreased from 50% to 25%."
+                    "note": "[Repair Pack] Duration bonus decreased from 50% to 25%.",
+                    "type": "nerf"
                 }
             ]
         },
         {
             "name": "Juno",
+            "trend": "winner",
+            "summary": "Higher critical damage and improved falloff range greatly increase her threat level at distance.",
             "changes": [
                 {
                     "ability": "MediMaster",
-                    "note": "Critical damage increased from 175% to 200%."
+                    "note": "Critical damage increased from 175% to 200%.",
+                    "type": "buff"
                 },
                 {
                     "ability": "Long Range Blaster",
-                    "note": "[Mediblaster] Falloff range bonus increased from 5m to 15m."
+                    "note": "[Mediblaster] Falloff range bonus increased from 5m to 15m.",
+                    "type": "buff"
                 },
                 {
                     "ability": "Heal Formation",
-                    "note": "Re-enabled."
+                    "note": "Re-enabled.",
+                    "type": "fix"
                 }
             ]
         },
         {
             "name": "Wuyang",
+            "trend": "loser",
+            "summary": "Major cuts to Overhealth mechanics and increased costs significantly lower Wuyang's utility as a support.",
             "changes": [
                 {
                     "ability": "Water College Hat",
-                    "note": "Passive [Restoration Stream] Duration bonus reduced from 50% to 25%."
+                    "note": "Passive [Restoration Stream] Duration bonus reduced from 50% to 25%.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Water College Hat",
-                    "note": "Overhealth per second reduced from 10 to 5."
+                    "note": "Overhealth per second reduced from 10 to 5.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Water College Hat",
-                    "note": "Max Overhealth decreased from 30 to 15."
+                    "note": "Max Overhealth decreased from 30 to 15.",
+                    "type": "nerf"
                 },
                 {
                     "ability": "Water College Hat",
-                    "note": "Cost increased from 4000 to 5000."
+                    "note": "Cost increased from 4000 to 5000.",
+                    "type": "nerf"
                 }
             ]
         }
