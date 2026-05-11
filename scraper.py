@@ -3,7 +3,9 @@ import os
 import json
 import requests
 
-import google.generativeai as genai
+from google import genai
+from google.genai import types
+
 from playwright.sync_api import sync_playwright
 from bs4 import BeautifulSoup
 
@@ -54,9 +56,7 @@ def enrich_data_with_ai(raw_patch_data):
         return raw_patch_data
 
     print("Starte KI-Analyse mit Gemini...")
-    genai.configure(api_key=api_key)
-    
-    model = genai.GenerativeModel('gemini-1.5-flash')
+    client = genai.Client(api_key=api_key)
     
     # Dein optimierter, professioneller Prompt
     prompt = f"""### ROLE
@@ -94,9 +94,10 @@ NO conversational filler.
 NO explanations."""
 
     try:
-        response = model.generate_content(
-            prompt,
-            generation_config=genai.GenerationConfig(
+        response = client.models.generate_content(
+            model="gemini-3-flash-preview",
+            contents=prompt,
+            config=types.GenerateContentConfig(
                 response_mime_type="application/json",
             )
         )
