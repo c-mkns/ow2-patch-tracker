@@ -1,16 +1,31 @@
 {
-    "version": "Overwatch Retail Patch Notes – May 14, 2026",
-    "date": "May 13, 2026",
+    "version": "Overwatch Retail Patch Notes – May 21, 2026",
+    "date": "May 21, 2026",
     "heroes": [
         {
             "name": "Jetpack Cat",
             "trend": "winner",
-            "summary": "Improved resource generation allows for faster scaling and more frequent access to utility upgrades throughout the match.",
+            "summary": "Substantial buffs to healing and explosion breakpoints significantly enhance Jetpack Cat's lethality and sustain, outweighing the reduction in fuel-to-damage scaling.",
             "changes": [
                 {
                     "ability": "General / Base Stats",
-                    "note": "Increased currency gain from healing and damage by 7.14%.",
+                    "note": "Bounce healing increased to 35% (up from 25%).",
                     "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Bonus Shot damage increased to 30% (up from 25%).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Explosion Damage increased to 120 (up from 100).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Ability Damage per 1% Fuel decreased to 7.5 (down from 10).",
+                    "type": "nerf"
                 }
             ]
         }
