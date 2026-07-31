@@ -1,30 +1,59 @@
 {
-    "version": "Overwatch Retail Patch Notes – July 28, 2026",
-    "date": "July 28, 2026",
+    "version": "Overwatch Retail Patch Notes – July 30, 2026",
+    "date": "July 30, 2026",
     "heroes": [
         {
-            "name": "Lifeweaver",
+            "name": "Domina",
             "changes": [
                 {
-                    "ability": "Healing Blossom",
-                    "note": "Fixed a bug where Healing Blossom would release unexpectedly when switching weapons.",
-                    "type": "fix"
+                    "ability": "Barrier Array",
+                    "note": "Barrier Cooldown reduced from 17 to 15 seconds."
+                },
+                {
+                    "ability": "Barrier Array",
+                    "note": "Barrier Duration reduced from 8 to 7 seconds."
                 }
-            ],
-            "trend": "bugfixes",
-            "summary": "This correction eliminates accidental discharge of healing charges, improving control and reliability when alternating between damage and support modes."
+            ]
         },
         {
-            "name": "Mercy",
+            "name": "Doomfist",
             "changes": [
                 {
-                    "ability": "General / Base Stats",
-                    "note": "Fixed an issue where Mercy was gaining increased self-healing from the Medic Subrole.",
-                    "type": "fix"
+                    "ability": "The Best Defense",
+                    "note": "Shield gain increased from 25 to 30."
                 }
-            ],
-            "trend": "bugfixes",
-            "summary": "Removing the unintended self-healing bonus brings Mercy’s survivability back in line with intended subrole tuning, slightly increasing her vulnerability to focus fire."
+            ]
+        },
+        {
+            "name": "Hazard",
+            "changes": [
+                {
+                    "ability": "Jagged Wall",
+                    "note": "Cooldown reduced from 15 to 13 seconds."
+                }
+            ]
+        },
+        {
+            "name": "Mauga",
+            "changes": [
+                {
+                    "ability": "Overrun",
+                    "note": "Cooldown reduced from 7 to 6 seconds."
+                }
+            ]
+        },
+        {
+            "name": "Ramattra",
+            "changes": [
+                {
+                    "ability": "Void Barrier",
+                    "note": "Cooldown reduced from 16 to 13 seconds."
+                },
+                {
+                    "ability": "Void Barrier",
+                    "note": "Duration reduced from 4 to 3 seconds."
+                }
+            ]
         }
     ]
 }
