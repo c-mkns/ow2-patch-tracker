@@ -1,57 +1,830 @@
 {
-    "version": "Overwatch Retail Patch Notes – July 30, 2026",
-    "date": "July 30, 2026",
+    "version": "Overwatch Retail Patch Notes – August 11, 2026",
+    "date": "August 11, 2026",
     "heroes": [
         {
             "name": "Domina",
+            "trend": "winner",
+            "summary": "Increased barrier health directly improves her capability to hold space and mitigate incoming damage.",
             "changes": [
                 {
-                    "ability": "Barrier Array",
-                    "note": "Barrier Cooldown reduced from 17 to 15 seconds."
-                },
-                {
-                    "ability": "Barrier Array",
-                    "note": "Barrier Duration reduced from 8 to 7 seconds."
+                    "ability": "Panopticon",
+                    "note": "Barrier health increased from 450 to 500.",
+                    "type": "buff"
                 }
             ]
         },
         {
             "name": "Doomfist",
+            "trend": "winner",
+            "summary": "The damage increase to Seismic Slam enhances his burst combo lethality against squishy targets.",
             "changes": [
                 {
-                    "ability": "The Best Defense",
-                    "note": "Shield gain increased from 25 to 30."
+                    "ability": "Seismic Slam",
+                    "note": "Damage increased from 50 to 60.",
+                    "type": "buff"
                 }
             ]
         },
         {
             "name": "Hazard",
+            "trend": "balanced",
+            "summary": "The ultimate cost increase is offset by a more reliable trigger for Bonespur hits in the neutral game.",
             "changes": [
                 {
-                    "ability": "Jagged Wall",
-                    "note": "Cooldown reduced from 15 to 13 seconds."
+                    "ability": "General / Base Stats",
+                    "note": "Ultimate cost increased by 7%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Reduced the number of Bonespur hits required from 14 to 12.",
+                    "type": "buff"
                 }
             ]
         },
         {
             "name": "Mauga",
+            "trend": "balanced",
+            "summary": "Increased sustain through overhealth is balanced by a longer cooldown on his primary movement and engagement tool.",
             "changes": [
                 {
+                    "ability": "General / Base Stats",
+                    "note": "Overhealth gained per shot increased from 3 to 4.",
+                    "type": "buff"
+                },
+                {
                     "ability": "Overrun",
-                    "note": "Cooldown reduced from 7 to 6 seconds."
+                    "note": "Cooldown increased from 5 to 6 seconds. (5v5)",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Orisa",
+            "trend": "rework",
+            "summary": "A massive mechanical shift towards a lifesteal-based brawler with higher critical impact and utility-based weapon scaling.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Energy Javelin's knockback is increased by 25% and its wall impact damage is increased by 15.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Critical damage increased to 100% (Up from 75%).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Reworked to Power.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Now increases Weapon Damage instead of granting Weapon Power.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Max Damage reduced to 30% (Down from 40%).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Reworked to Item.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Added 15% Weapon Lifesteal.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Attack Speed during Fortify increased to 15% (Up from 10%).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Added 10000 Cost.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Added \"[Energy Javelin] critical hits reduce an additional 1.5s\".",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Winston",
+            "trend": "winner",
+            "summary": "Lower ultimate costs and increased healing throughput solidify his role as a high-sustain dive tank.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Ultimate cost reduced by 6%.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Healing increased from 30 to 35.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Cassidy",
+            "trend": "winner",
+            "summary": "The movement speed boost after Combat Roll provides a much-needed escape and repositioning tool.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "After using Combat Roll, Cassidy gains a 60% movement speed boost that decays over 1.5 seconds.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Echo",
+            "trend": "winner",
+            "summary": "Infinite ammo and increased Focusing Beam reach significantly boost her lethality during flight windows.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Echo has infinite ammo during Flight.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Moved from Minor to Major Perk.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Focusing Beam's range is increased by 8 meters and movement speed is increased by 25% when active.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Range increased from 6 to 8 meters.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Movement speed increased from 15% to 25%.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Emre",
+            "trend": "winner",
+            "summary": "Stronger crowd control and faster ultimate generation make him a more consistent threat on the battlefield.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Ultimate cost reduced by 6%.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Slow duration increased from 1 to 1.5 seconds.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Genji",
+            "trend": "winner",
+            "summary": "A minor reduction in ultimate cost slightly increases the frequency of Dragonblade engage opportunities.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Ultimate cost reduced by 6%.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Pharah",
+            "trend": "loser",
+            "summary": "Increased cooldown on Concussive Blast reduces her overall mobility and displacement frequency.",
+            "changes": [
+                {
+                    "ability": "Concussive Blast",
+                    "note": "Cooldown increased from 7 to 8 seconds.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Shion",
+            "trend": "loser",
+            "summary": "The reduced detection radius for Joyride makes the ability more difficult and less forgiving to trigger.",
+            "changes": [
+                {
+                    "ability": "Joyride",
+                    "note": "Ground launch detection radius reduced from 1.5 to 1 meter.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Tracer",
+            "trend": "winner",
+            "summary": "Enhanced passive regeneration and a lower Recall cooldown significantly improve her uptime and survivability.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Passive health regeneration triggers 50% faster.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Recall",
+                    "note": "Cooldown reduced from 13 to 12 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Pulse Bomb Damage decreased to 70% reduced (Down from 60% reduced).",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Vendetta",
+            "trend": "winner",
+            "summary": "The massive spawn cooldown reduction for Soaring Slice allows for much faster re-engagement after dying.",
+            "changes": [
+                {
+                    "ability": "Soaring Slice",
+                    "note": "Cooldown on spawn reduced from 7 to 3 seconds.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Venture",
+            "trend": "winner",
+            "summary": "Improvements to mobility, survivability, and ultimate frequency make Venture a significantly more dangerous diver.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Ultimate cost reduced by 8%.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Drill Dash distance is increased from 50% to 75%.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Total amount of shields gained increased from 30 to 40.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Jetpack Cat",
+            "trend": "balanced",
+            "summary": "Trading utility duration and ultimate cost for significantly better base movement and ability uptime.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Ultimate cost increased by 7%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Base movement speed increased from 5.5 to 6 meters per second.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Air acceleration increased from 7.7 to 9.5.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Each pulse of Purr contains 3 waves.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Lifeline",
+                    "note": "Movement speed bonus reduced from 40% to 30%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Increased duration for each Purr target reduced to 10% (Down from 15%).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Max increased duration reduced to 50% (Down from 75%).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Now triggers off of any damage instead of just Ability damage.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Added 20% [Purr] Cooldown Reduction.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cost increased to 11000 (Up from 10000).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cost reduced to 5000 (Down from 10000).",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Juno",
+            "trend": "winner",
+            "summary": "Faster lock-on for Pulsar Torpedoes makes her offensive utility much more responsive and harder to dodge.",
+            "changes": [
+                {
+                    "ability": "Pulsar Torpedoes",
+                    "note": "Target lock on minimum time reduced from 0.5 to 0.35 seconds.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Lifeweaver",
+            "trend": "balanced",
+            "summary": "The addition of manual cancel for Life Grip improves agency, but reduced pull speed limits its rescue potential.",
+            "changes": [
+                {
+                    "ability": "Life Grip",
+                    "note": "Can now be manually cancelled with the Jump input after 0.6 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Life Grip",
+                    "note": "Base pull speed reduced from 30 to 25 meters per second.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Life Grip",
+                    "note": "Targets pulled from further than 15 meters move slower and accelerate over time.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Life Grip",
+                    "note": "New general hero setting added for disabling Life Grip cancel controls.",
+                    "type": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "Mizuki",
+            "trend": "loser",
+            "summary": "Widespread nerfs to mobility, projectile size, and cooldowns significantly reduce her combat efficiency.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Movement speed gained reduced from 25% to 20%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Binding Chain",
+                    "note": "Projectile size reduced from 0.35 to 0.3.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Katashiro Return",
+                    "note": "Cooldown increased from 11 to 12 seconds.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Wuyang",
+            "trend": "rework",
+            "summary": "Extensive rebalancing of cooldowns and weapon damage scaling fundamentally changes her power spikes.",
+            "changes": [
+                {
+                    "ability": "Guardian Wave",
+                    "note": "Maximum degrees increased from 10 to 15 degrees.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Duration increased to 5s (Up from 4s).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Empowered shots increased to 3 (Up from 2).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Damage per extra Orb increased to 30% (Up from 20%).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cost reduced to 10000 (Down from 12000).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cost increased to 11000 (Up from 10000).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Added 10% Ability Power.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cooldown reduction every 1s increased to 0.5s (Up from 0.3s).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cost increased to 12000 (Up from 10000).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Weapon Power increased to 20% (Up from 10%).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cost reduced to 3750 (Down from 4000).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "50 Shields.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "\"When you use [Rushing Torrent], place Passive [Restorative Stream] on yourself with 25% reduced healing\".",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "9000 Cost.",
+                    "type": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "Zenyatta",
+            "trend": "winner",
+            "summary": "Increased lifesteal provides Zenyatta with much-needed self-sustain when landing his shots.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Lifesteal increased from 10 to 15%.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "D.Va",
+            "trend": "rework",
+            "summary": "Transformative changes turn Defense Matrix into a support tool and drastically buff her pilot-form combat capability.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Reworked from \"[Defense Matrix] heals you for 30% of the damage it blocks\" to \"When you mitigate 150 damage with [Defense Matrix], heal yourself for 15% of that damage and all other allies within 6m for 25% of that damage\".",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Added \"when dealing Weapon damage to enemies beyond 8m, [Defense Matrix] recovers 33% faster\".",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Damage reduced to 40 (Down from 60).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Duration reduced to 2s (Down from 3s).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "\"+50% [Call Mech] Radius. When ejecting or re-entering your [Mech], grant Overhealth equal to 20% of Max Life for 5s\".",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Reworked from Express Detonation.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Changed from \"+50% [Call Mech] Radius. [Self-Destruct] explodes 15% faster\" to \"[Self-Destruct] explodes 25% faster and costs 50% less Ultimate Charge but deals 75% reduced damage and only grants 75% Ultimate Charge after detonation\".",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Changed from \"During the first 2s of [Boosters], [Defense Matrix] recovers 125% faster\" to \"[Boosters] damage grants 0.5s [Booster] Duration and restores 5% [Defense Matrix] Resource and heals 5% Max Life\".",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Now scales from Max Life instead of Max Shields and Armor.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Scaling reduced to 15% (Down from 25%).",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Now counts as [Boosters] damage.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "25 Health.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "5% Weapon Power.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "\"While ejected from your [Mech], gain 20% Move Speed, 10% Attack Speed, and 50% Max Ammo\".",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "5000 Cost.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "10% Attack Speed",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "\"When you mitigate 150 damage with [Defense Matrix], deal 20% increased Weapon Damage for 3s\".",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Reworked from Dae-Hyun's Detonator.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Changed from \"If your [Mech] detonates while mid-air, increase [Self-Destruct] explosion damage and range by 100%\" to \"During [Self-Destruct], if your [Mech] detonates while mid-air or deals [Boosters] damage, [Self-Destruct] explodes 100% larger and causes enemies to take 50% more damage for 5s\".",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "25 Armor.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "15% Ability Power.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "During [Self-Destruct], [Boosters] move 50% faster, deal 300% bonus damage, and knock up enemies.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Reworked from Busan Blaster.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Changed from \"Ability: Use [Secondary Fire] while de-meched to fire an explosive piercing shot that deals 80 damage\" to \"While ejected from your [Mech], hold [Jump] to fly and hold [Secondary Fire] to fire an explosive shot that deals up to 80 damage and slows enemies by 30% for 3s\".",
+                    "type": "buff"
                 }
             ]
         },
         {
             "name": "Ramattra",
+            "trend": "loser",
+            "summary": "Large reductions in bonus damage for his ultimate and vortex significantly lower his lethality.",
             "changes": [
                 {
-                    "ability": "Void Barrier",
-                    "note": "Cooldown reduced from 16 to 13 seconds."
+                    "ability": "General / Base Stats",
+                    "note": "Detonation bonus damage reduced to 25 (Down from 50).",
+                    "type": "nerf"
                 },
                 {
-                    "ability": "Void Barrier",
-                    "note": "Duration reduced from 4 to 3 seconds."
+                    "ability": "General / Base Stats",
+                    "note": "Ravenous Vortex bonus damage reduced to 15% (Down from 30%).",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Zarya",
+            "trend": "loser",
+            "summary": "A massive increase in resource cost significantly slows down her ability to cycle bubbles and reach high energy.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cost increased to 9000 (Up from 3750).",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Ashe",
+            "trend": "winner",
+            "summary": "An increase in ultimate cost reduction allows for more frequent BOB deployments, boosting her objective control.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Ultimate Cost reduction increased to 60% (Up from 50%).",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Junkrat",
+            "trend": "winner",
+            "summary": "Direct hits are now extremely rewarding, significantly speeding up his ability rotation for skilled players.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "10% Weapon Power",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "\"[Frag Launcher] Direct Hits without bouncing reduce cooldown of all abilities by 20%\".",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "11000 Cost.",
+                    "type": "neutral"
+                }
+            ]
+        },
+        {
+            "name": "Ana",
+            "trend": "winner",
+            "summary": "Rewarding scoped Sleep Darts with cooldown reduction allows Ana to be much more aggressive against dive targets.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Added \"Landing a scoped [Sleep Dart] reduces its cooldown by 5s\".",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "75 base damage now only applies to scoped [Sleep Dart].",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Increased base damage now works with Comfy Cloud.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Max Life heal increased to 20% (Up from 15%).",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Kiriko",
+            "trend": "winner",
+            "summary": "Lower mobility cooldowns and more empowered shots further increase her survivability and dueling power.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Added \"cooldown is reduced by 20% when used without a target\".",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Empowered shots increased to 5 (Up from 3).",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cooldown refund increased to 25% (Up from 20%).",
+                    "type": "buff"
                 }
             ]
         }
