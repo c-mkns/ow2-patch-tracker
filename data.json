@@ -1,64 +1,18 @@
 {
-    "version": "Overwatch Retail Patch Notes – August 14, 2026",
-    "date": "August 14, 2026",
+    "version": "Overwatch Retail Patch Notes – August 20, 2026",
+    "date": "August 20, 2026",
     "heroes": [
         {
-            "name": "D.Mon",
+            "name": "Mizuki",
             "changes": [
                 {
                     "ability": "General / Base Stats",
-                    "note": "Fixed a bug with Portable Fusion Repeater that could result in hits failing to register."
-                },
-                {
-                    "ability": "General / Base Stats",
-                    "note": "Fixed a bug with Limit Break not correctly granting Overhealth for targets hit."
-                },
-                {
-                    "ability": "General / Base Stats",
-                    "note": "Fixed in a previous update - Resolved an issue that prevented Overhealth from being applied when Limit Break was activated."
-                },
-                {
-                    "ability": "General / Base Stats",
-                    "note": "Fixed a bug where Toggle Propulsors did not work on console platforms."
-                },
-                {
-                    "ability": "General / Base Stats",
-                    "note": "Fixed an issue with being damaged from the front with while Power Barrier was deployed."
-                },
-                {
-                    "ability": "General / Base Stats",
-                    "note": "Adjusted the height of the mech head hitbox to be more flush with the model."
-                },
-                {
-                    "ability": "Surging Strike",
-                    "note": "Cast Time reduced from 0.15 to 0.05 seconds."
-                },
-                {
-                    "ability": "Surging Strike",
-                    "note": "Recovery reduced from 0.25 to 0.15 seconds."
-                },
-                {
-                    "ability": "Fusion Repeater",
-                    "note": "Cast Time reduced from 0.3 to 0.2 seconds."
-                },
-                {
-                    "ability": "Fusion Repeater",
-                    "note": "Recovery Time reduced from 0.5 to 0.2 seconds."
+                    "note": "Fixed an issue where Mizuki could reach unintended locations.",
+                    "type": "fix"
                 }
-            ]
-        },
-        {
-            "name": "Jetpack Cat",
-            "changes": [
-                {
-                    "ability": "General / Base Stats",
-                    "note": "Base movement speed reduced from 6 to 5.5 meters per second."
-                },
-                {
-                    "ability": "Purr",
-                    "note": "Self healing penalty increased from 25% to 40%."
-                }
-            ]
+            ],
+            "trend": "bugfixes",
+            "summary": "The correction of map-breaking mobility exploits maintains competitive integrity without impacting Mizuki's baseline power level."
         }
     ]
 }
