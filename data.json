@@ -1,43 +1,1266 @@
 {
-    "version": "Overwatch Retail Patch Notes – September 17, 2026",
-    "date": "September 17, 2026",
+    "version": "Overwatch Retail Patch Notes – October 6, 2026",
+    "date": "October 6, 2026",
     "heroes": [
         {
-            "name": "D.Mon",
+            "name": "Roadhog",
+            "trend": "rework",
+            "summary": "The addition of Trash Compactor and a reworked Scrap Gun shifts Roadhog toward a more active, projectile-absorbing tank role with higher primary fire consistency.",
             "changes": [
                 {
                     "ability": "General / Base Stats",
-                    "note": "Armor reduced from 325 to 275 (5v5).",
-                    "type": "nerf"
+                    "note": "Ammo reloaded increased from 2 to 4.",
+                    "type": "buff"
                 },
                 {
                     "ability": "General / Base Stats",
-                    "note": "Armor reduced from 300 to 250 (6v6).",
-                    "type": "nerf"
+                    "note": "Removed.",
+                    "type": "neutral"
                 },
                 {
                     "ability": "General / Base Stats",
-                    "note": "Damage per bullet reduced from 45 to 36.",
+                    "note": "New Minor Perk.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "During Whole Hog, Chain Hook’s cooldown is reduced by 80%.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New Major Perk.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Enemies in front of Roadhog while Trash Compactor is active are slowed by 30% and take 20 damage per second.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Primary Fire now fires 2 bursts per volley.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Ammo increased from 6 to 12.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Total damage per volley increased from 175 to 204.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Critical damage multiplier decreased from 2x to 1.5x.",
                     "type": "nerf"
                 },
                 {
-                    "ability": "Propulsors",
-                    "note": "Fuel drain rate increased from 25 to 30.",
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Shotgun pellet count decreased from 25 to 16.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Shotgun pellet damage decreased from 7 to 4.25.",
                     "type": "nerf"
                 },
                 {
-                    "ability": "Fusion Repeater",
-                    "note": "Damage reduced from 16 to 15.",
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Now fires a larger projectile in the center of each shot.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Center projectile deals 34 damage.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Spread decreased from 8 degrees to 6 degrees.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Falloff range decreased from 30-50 meters to 20-35 meters.",
                     "type": "nerf"
                 },
                 {
-                    "ability": "Fusion Repeater",
-                    "note": "Cooldown increased from 4 to 5 seconds.",
+                    "ability": "Scrap Gun – Primary Fire",
+                    "note": "Projectile speed increased from 80 meters per second to 100 meters per second.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Scrap Gun – Secondary Fire",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "New ability assigned to Secondary Fire by default.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "When activated, begin absorbing projectiles in front of Roadhog for 2 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "After the duration, fire an explosive projectile whose damage scales based on the damage absorbed, ranging from 75 to 200 damage.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "Explosion inner radius of 2 meters, explosion outer radius of 6 meters with a 30% falloff scalar.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "Impact damage is 10.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "Conversion rate is 30% of damage absorbed.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "Movement speed penalty of 15% while active.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "Cooldown is 10 seconds in 5v5.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Trash Compactor",
+                    "note": "Cooldown is 11 seconds in 6v6.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Chain Hook",
+                    "note": "Enemy stun duration after being pulled decreased from 0.4 seconds to 0.3 seconds.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Chain Hook",
+                    "note": "Target’s final distance from Roadhog after being pulled increased from 3 meters to 4.5 meters.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Chain Hook",
+                    "note": "Cooldown decreased from 7 seconds to 6 seconds in 5v5.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Chain Hook",
+                    "note": "Cooldown decreased from 8 seconds to 7 seconds in 6v6.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Take a Breather",
+                    "note": "Max duration decreased from 3 seconds to 2 seconds.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Take a Breather",
+                    "note": "Healing over time increased from 150 per second to 200 per second.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Take a Breather",
+                    "note": "Damage reduction decreased from 40% to 35%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Take a Breather",
+                    "note": "Cooldown increased from 1.25 seconds to 2 seconds.",
                     "type": "nerf"
                 }
-            ],
+            ]
+        },
+        {
+            "name": "Sombra",
+            "trend": "rework",
+            "summary": "Moving to the Support role, Sombra now focuses on utility-based healing and area weakening while retaining stealth and information-gathering capabilities.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Moved from Damage to Support role.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Moved from Recon subrole to Tactician subrole.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Experience required to earn minor perk increased by 67%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Experience required to earn major perk increased by 69.5%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New Minor Perk.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "EMP applies Hotfix to all nearby allies.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New Major Perk.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Hacking health packs with Hotfix reduces its main cooldown by 4 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New Major Perk.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Cyberspace’s healing is doubled on allies below half health.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Machine Pistol",
+                    "note": "Damage per projectile decreased from 8 to 7.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Machine Pistol",
+                    "note": "Minimum falloff distance increased from 15 meters to 20 meters.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Machine Pistol",
+                    "note": "Maximum spread decreased from 2.3 degrees to 2 degrees.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Machine Pistol",
+                    "note": "Shots until max spread increased from 6 to 10.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "EMP",
+                    "note": "Ultimate cost increased by 67.5%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "EMP",
+                    "note": "Damage decreased from 25% of current health to 20% of current health.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Hack",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "New ability assigned to Secondary Fire by default.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Heal an ally over time for a set amount of health.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Hotfixing an ally heals them for 65 instant health and 25 health per second over its duration.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Hotfix lasts on an ally until either 175 total healing is done or until 12 seconds have passed.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Hotfix can also target health packs and most enemy deployables to hack them, which does not require any Hotfix charges and triggers a separate 6 second cooldown.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Hacked health pack duration decreased from 45 seconds to 30 seconds.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Hacking health packs or deployables can be interrupted by taking damage, which will cancel the ability and trigger the separate 6 second cooldown.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Hotfix can be used while stealthed, temporarily revealing Sombra without breaking stealth.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Cast time is 0.5 seconds.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Range is 17 meters.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Has 2 charges.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Hotfix",
+                    "note": "Cooldown is 8 seconds.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Virus",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Cyberspace",
+                    "note": "New ability assigned to Ability 1 by default.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Cyberspace",
+                    "note": "Launch a projectile that explodes on impact, creating a zone that weakens enemies and heals allies.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Cyberspace",
+                    "note": "Initial explosion deals 40 damage to enemies and 40 healing to allies.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Cyberspace",
+                    "note": "Zone deals 25 damage per second to enemies and 30 healing per second to allies.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Cyberspace",
+                    "note": "Zone duration is 3 seconds.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Cyberspace",
+                    "note": "Zone radius is 5 meters.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "Cyberspace",
+                    "note": "Enemies within the zone are weakened, which is a new status effect that reduces the target’s own damage and healing output by 50%.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Translocator",
+                    "note": "Stealth duration increased from 5 seconds to 6.5 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Translocator",
+                    "note": "Time to enter Stealth increased from 0.3 seconds to 0.75 seconds.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Translocator",
+                    "note": "Projectile range reduced from 18 meters to 12.25 meters.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Translocator",
+                    "note": "Movement speed bonus is now active immediately after teleporting instead of after fully entering Stealth.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Translocator",
+                    "note": "Cooldown increased from 6 seconds to 7.5 seconds.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Opportunist",
+                    "note": "Removed.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Conspirator",
+                    "note": "New Passive.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Conspirator",
+                    "note": "Fully-charged enemy ultimates are revealed to you.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 14 to 16.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume reduced from 25 to 23.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 15 to 18.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "D.Va",
+            "trend": "winner",
+            "summary": "Increased fire rate on Micro Missiles significantly boosts D.Va's burst damage potential during dives.",
+            "changes": [
+                {
+                    "ability": "Micro Missiles",
+                    "note": "Fire rate increased from 11 to 14 shots per second.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Domina",
+            "trend": "winner",
+            "summary": "Enhanced ability lifesteal and a shorter Crystal Charge cooldown provide Domina with much higher combat sustain and mobility.",
+            "changes": [
+                {
+                    "ability": "Crystal Charge",
+                    "note": "Cooldown reduced from 8 to 7 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Reconstruction (Passive)",
+                    "note": "Ability lifesteal increased from 75% to 100%.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Bastion",
             "trend": "loser",
-            "summary": "Substantial reductions to D.Mon's effective health and sustained damage output drastically reduce her frontline staying power and lethality."
+            "summary": "A shorter Reconfigure duration and larger head hitbox make Bastion both less lethal and more fragile.",
+            "changes": [
+                {
+                    "ability": "Reconfigure",
+                    "note": "Duration reduced from 6 to 5 seconds.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 20 to 21.5.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Back minigun hit volume reduced from 20 to 18.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Lower arm hit volume reduced from 20 to 15.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Cassidy",
+            "trend": "winner",
+            "summary": "Reductions to torso and leg hitboxes improve Cassidy's survivability in duels.",
+            "changes": [
+                {
+                    "ability": "Deadeye",
+                    "note": "Now prevents attaching to Jetpack Cat's Lifeline.",
+                    "type": "fix"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume reduced from 37 to 33.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes reduced from 24 to 22.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Emre",
+            "trend": "balanced",
+            "summary": "Improved ability uptime via Cyber Frag is offset by significant increases to his head and leg hitboxes.",
+            "changes": [
+                {
+                    "ability": "Cyber Frag",
+                    "note": "Cooldown reduced from 10 to 9 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 16 to 18.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 17.5 to 20.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Genji",
+            "trend": "winner",
+            "summary": "Genji gains higher base lethality with Swift Strike damage and Dragonblade swing speed increases, despite lower per-swing damage.",
+            "changes": [
+                {
+                    "ability": "Swift Strike",
+                    "note": "Damage increased from 50 to 60.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Dragonblade",
+                    "note": "Damage reduced from 110 to 100.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Dragonblade",
+                    "note": "Swing speed increased by 15%.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Shion",
+            "trend": "winner",
+            "summary": "Increasing the duration of Evade's overhealth improves her survivability during aggressive engagements.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Evade's overhealth duration is increased by 1 second.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Ana",
+            "trend": "rework",
+            "summary": "Ana's Sleep Dart becomes a more reliable area-denial tool, trading her small head profile for added utility and damage.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Removed.",
+                    "type": "neutral"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "New.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Sleep dart explodes on impact, slowing enemies and dealing 45 damage over 3 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 16.9 to 18.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Doctrine",
+            "trend": "loser",
+            "summary": "Sweeping nerfs to ability cooldowns, damage reduction, and ultimate generation significantly reduce Doctrine's meta-dominance.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Ultimate cost increased by 8%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Damage and healing conversion rate reduced by 50%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Invigorating Drones",
+                    "note": "Attack Speed reduced from 35% to 30%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Shrouded Momentum",
+                    "note": "Cooldown increased from 7 to 8 seconds.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Shrouded Momentum",
+                    "note": "Damage reduction reduced from 50% to 40%.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Shrouded Momentum",
+                    "note": "No longer provides critical hit immunity while active.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Deliverance",
+                    "note": "Drone Fire Rate increased from 4 to 5.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Deliverance",
+                    "note": "Overhealth and debuff duration reduced from 8 to 6 seconds.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "Deliverance",
+                    "note": "Decay duration reduced from 5 to 4 seconds.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Lúcio",
+            "trend": "winner",
+            "summary": "Automatic Amp It Up after Sound Barrier significantly increases the value and safety of his ultimate.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Amp It Up is now active for 4 seconds after casting Sound Barrier.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "Sound Barrier",
+                    "note": "Duration increased from 5 to 6 seconds.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 13.2 to 16.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Anran",
+            "trend": "loser",
+            "summary": "Large increases across all hit volume categories make Anran much easier to focus and kill.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 15.2 to 17.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 18 to 23.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volume increased from 14.7 to 19.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Ashe",
+            "trend": "loser",
+            "summary": "Increased torso and leg hitboxes make Ashe a significantly more vulnerable target for dive and long-range fire.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 22.4 to 25.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 16.7 to 19.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Baptiste",
+            "trend": "loser",
+            "summary": "A minor increase to head hit volume slightly reduces Baptiste's survivability against skilled precision shooters.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 15.1 to 16.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Doomfist",
+            "trend": "loser",
+            "summary": "Significant hitbox increases to his torso and legs make Doomfist easier to hit, despite a reduction in his fist hitbox.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 19.7 to 21.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Waist hit volume increased from 30 to 35.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volume increased from 21 to 26.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Fist hit volume reduced from 24 to 20.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Echo",
+            "trend": "loser",
+            "summary": "Large increases to head and leg hitboxes make Echo much easier to punish while she is in flight.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 15.9 to 18.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 14.6 to 20.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Hanzo",
+            "trend": "loser",
+            "summary": "The increased head hit volume makes Hanzo more vulnerable in sniper duels.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 16 to 18.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Hazard",
+            "trend": "loser",
+            "summary": "Increased head and leg volumes decrease Hazard's overall survivability under pressure.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 18.5 to 20.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 21.9 to 24.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Illari",
+            "trend": "loser",
+            "summary": "Significant increases to head and torso hitboxes make Illari easier to hit while she is poking from the backline.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 14.9 to 18.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 20 to 23.5.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Jetpack Cat",
+            "trend": "loser",
+            "summary": "Substantial hitbox increases across the board make Jetpack Cat a much larger and more vulnerable target.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 15.8 to 18.5.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 14.8 to 17.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Waist hit volume increased from 19.5 to 26.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 9.7 to 12.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Junker Queen",
+            "trend": "loser",
+            "summary": "Widespread hitbox increases across her entire frame make Junker Queen easier to focus down as a tank.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 17.8 to 19.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 26.2 to 28.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Waist hit volume increased from 23.8 to 26.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volume increased from 19.2 to 22.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Junkrat",
+            "trend": "balanced",
+            "summary": "A reduction in torso hit volume is balanced out by an increase in leg hit volume, leaving his overall profile shifted but similar.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume reduced from 32 to 29.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 17.3 to 20.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Juno",
+            "trend": "balanced",
+            "summary": "Juno's profile becomes more centered as torso volume increases while arm and hand volumes decrease.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 19 to 23.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Hand hit volumes reduced from 8.5 to 5.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Arm hit volumes reduced from 9 to 7.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Kiriko",
+            "trend": "loser",
+            "summary": "Kiriko's famously small hitbox is widened, making her more susceptible to standard projectile and hitscan fire.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 14.9 to 16.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 17.7 to 21.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Lifeweaver",
+            "trend": "loser",
+            "summary": "Large hitbox increases across his entire body make Lifeweaver one of the largest and easiest targets in the Support role.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 14.8 to 17.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 19.7 to 25.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 15.5 to 19.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Waist hit volume increased from 15.9 to 20.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Mauga",
+            "trend": "balanced",
+            "summary": "Profile adjustments make Mauga more vulnerable to body shots while slightly refining his leg profile, resulting in a net-neutral change.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 22 to 23.5.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Hand hit volumes reduced from 16 to 12.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volume length reduced from 50 to 35.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 40 to 42.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume width increased from 30 to 40.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Mercy",
+            "trend": "balanced",
+            "summary": "A larger head and torso hitbox is offset by smaller leg volumes, keeping her overall difficulty to hit relatively consistent.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 14.4 to 17.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 22.4 to 24.5.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes reduced from 22.4 to 20.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Mizuki",
+            "trend": "balanced",
+            "summary": "A reduction in head height is balanced by increases in head, torso, and leg volume.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume height reduced from 10 to 6.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 16 to 17.5.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 22 to 24.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 17 to 19.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Moira",
+            "trend": "winner",
+            "summary": "A reduction in torso hit volume improves Moira's already high survivability during combat.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume reduced from 27 to 25.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Reinhardt",
+            "trend": "winner",
+            "summary": "Significant reductions to his shoulder, hand, and foot volumes make Reinhardt slightly harder to hit in the open.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Shoulder hit volume reduced from 40 to 35.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Hand hit volumes reduced from 25 to 20.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Foot hit volumes reduced from 40 to 30.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Sierra",
+            "trend": "loser",
+            "summary": "Broad increases to torso and leg volumes make Sierra a much easier target to track and burst.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 20.7 to 23.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Legs hit volumes increased from 16.7 to 19.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Lower leg hit volumes increased from 15 to 19.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Lower leg hit volume height reduced from 54.9 to 40.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Sojourn",
+            "trend": "loser",
+            "summary": "Increases to head, torso, and leg hitboxes make Sojourn more vulnerable during her high-mobility slides.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 14.9 to 16.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 20.5 to 23.5.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 17 to 18.5.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Symmetra",
+            "trend": "balanced",
+            "summary": "Trading leg volume for increased torso volume shifts her vulnerability toward center-mass shots.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 22.4 to 24.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volume reduced from 22.4 to 20.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Torbjörn",
+            "trend": "winner",
+            "summary": "Significant reductions to his head and claw hitboxes make Torbjörn much harder to eliminate quickly.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume reduced from 23.3 to 20.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Claw hand hit volume reduced from 15 to 11.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Tracer",
+            "trend": "balanced",
+            "summary": "A larger torso hitbox increases Tracer's risk during close-range blinking, though smaller legs slightly mitigate this.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 22.4 to 24.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Legs hit volumes reduced from 22.4 to 20.",
+                    "type": "buff"
+                }
+            ]
+        },
+        {
+            "name": "Venture",
+            "trend": "loser",
+            "summary": "Substantial increases to torso and leg volumes make Venture easier to focus while they are engaged in close combat.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 22.9 to 25.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes increased from 17 to 21.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Wrecking Ball",
+            "trend": "loser",
+            "summary": "Increases to both head and torso volumes make Wrecking Ball a much more susceptible target for hitscan and burst damage.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 22 to 25.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 83.5 to 87.5.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Wuyang",
+            "trend": "loser",
+            "summary": "Noticeable increases to head and torso hitboxes reduce Wuyang's overall survivability.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume increased from 14.85 to 16.",
+                    "type": "nerf"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume increased from 20.2 to 23.",
+                    "type": "nerf"
+                }
+            ]
+        },
+        {
+            "name": "Zenyatta",
+            "trend": "winner",
+            "summary": "Significant reductions to his head, torso, and leg hitboxes provide Zenyatta with a massive boost to survivability.",
+            "changes": [
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Head hit volume reduced from 20 to 17.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Torso hit volume reduced from 32 to 30.",
+                    "type": "buff"
+                },
+                {
+                    "ability": "General / Base Stats",
+                    "note": "Leg hit volumes reduced from 24 to 22.",
+                    "type": "buff"
+                }
+            ]
         }
     ]
 }
